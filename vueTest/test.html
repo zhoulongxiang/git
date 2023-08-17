@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+       <p>hello,{{name}}</p>
+       <p>我的名字是{{age}}</p>
+       <p><a v-bind:href="school.url">我的地址是</a></p>
+   </div>
+   <script>
+    Vue.config.productionTip = false;
+    var app=new Vue({
+        // el:"#app",
+        data:{
+            name:"Vue",
+            age:"18",
+            school:{
+                url:"https://www.yuexunsoft.com",
+            }
+        }
+    });
+    app.$mount("#app");
+</script>
+</body>
+</html>
